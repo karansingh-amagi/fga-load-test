@@ -1,4 +1,4 @@
-# import uuid
+import uuid
 import random
 import requests
 
@@ -22,8 +22,8 @@ class GithubRead(HttpUser):
             "tuple_key": {
                 "object": objects,
                 "relation": relation,
-                # "user": f"user:{str(uuid.uuid4())}",
-                "user": random.choice(user),
+                "user": f"user:{str(uuid.uuid4())}",
+                # "user": f"user:{random.choice(user)}",
             },
             "authorization_model_id": GITHUB,
         }

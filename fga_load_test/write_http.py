@@ -19,8 +19,8 @@ class GithubWrite(HttpUser):
                     {
                         "object": objects,
                         "relation": relation,
-                        # "user": f"user:{str(uuid.uuid4())}",
-                        "user": random.choice(user),
+                        "user": f"user:{str(uuid.uuid4())}",
+                        # "user": f"user:{random.choice(user)}",
                     },
                 ]
             },
