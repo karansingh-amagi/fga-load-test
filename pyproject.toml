@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "fga-load-test"
+version = "0.1.0"
+description = ""
+authors = ["Karan <karan.singh@amagi.com>"]
+readme = "README.md"
+packages = [{include = "fga_load_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+locust = "^2.16.1"
+pydantic = "1.10"
+grpcio = "^1.57.0"
+grpcio-tools = "^1.57.0"
+openfga-sdk = "^0.2.0"
+google = "^3.0.0"
+betterproto = "^1.2.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+write_http = "fga_load_test.locustfile:write_http"
+read_http = "fga_load_test.locustfile:read_http"
+read_rpc = "fga_load_test.locustfile:read_rpc"
